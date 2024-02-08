@@ -32,7 +32,7 @@ let activeNote = {};
 const getAndRenderNotes = () => getNotes().then(renderNoteList);
 
 const getNotes = () =>
-  fetch('http://localhost:3001/api/notes', {
+  fetch('/api/notes', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'
@@ -40,7 +40,7 @@ const getNotes = () =>
   });
 
 const saveNote = (note) =>
-  fetch('http://localhost:3001/api/notes', {
+  fetch('/api/notes', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
